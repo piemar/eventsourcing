@@ -1,0 +1,5 @@
+bin/
+obj/
+.env_local
+.DS_Store
+performance-test/__pycache__/

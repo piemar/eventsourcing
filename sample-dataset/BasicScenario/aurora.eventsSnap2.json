@@ -1,0 +1,148 @@
+[{
+  "_id": {
+    "$oid": "64a6cfd4b43e5d2311fcf845"
+  },
+  "LastUpdatedAt": "1511950291651",
+  "VersionId": "dcc071d7-69c7-448b-9883-8280948ab84c",
+  "SoftwarePackage": [],
+  "Version": [
+    {
+      "Id": {
+        "$oid": "64a6cbe34f40911951dc2b15"
+      },
+      "RState": "R1A",
+      "SoftwarePackageId": "1bac2a24-6b9e-491f-ab2a-f1572766bf4f",
+      "State": "Initial",
+      "VersionId": "dcc071d7-69c7-448b-9883-8280948ab84c",
+      "Timestamp": "1511950291651"
+    },
+    {
+      "Id": {
+        "$oid": "64a6cbe34f40911951dc2b19"
+      },
+      "RState": "R1A",
+      "VersionId": "dcc071d7-69c7-448b-9883-8280948ab84c",
+      "Timestamp": "1511950291651"
+    },
+    {
+      "Id": {
+        "$oid": "64a6cbe34f40911951dc2b27"
+      },
+      "RState": "R1A",
+      "VersionId": "dcc071d7-69c7-448b-9883-8280948ab84c",
+      "Timestamp": "1511950291651"
+    },
+    {
+      "Id": {
+        "$oid": "64a6cbe34f40911951dc2b28"
+      },
+      "VersionId": "dcc071d7-69c7-448b-9883-8280948ab84c",
+      "Timestamp": "1511950291651"
+    },
+    {
+      "Id": {
+        "$oid": "64a6cbe34f40911951dc2b29"
+      },
+      "State": "Uploading",
+      "VersionId": "dcc071d7-69c7-448b-9883-8280948ab84c",
+      "Timestamp": "1511950291651"
+    },
+    {
+      "Id": {
+        "$oid": "64a6cbe34f40911951dc2b2c"
+      },
+      "State": "Registration",
+      "VersionId": "dcc071d7-69c7-448b-9883-8280948ab84c",
+      "Timestamp": "1511950291651"
+    },
+    {
+      "Id": {
+        "$oid": "64a6cbe34f40911951dc2b2d"
+      },
+      "VersionId": "dcc071d7-69c7-448b-9883-8280948ab84c",
+      "Timestamp": "1511950291651"
+    },
+    {
+      "Id": {
+        "$oid": "64a6cbe34f40911951dc2b2e"
+      },
+      "State": "Released",
+      "VersionId": "dcc071d7-69c7-448b-9883-8280948ab84c",
+      "Timestamp": "1511950291651"
+    }
+  ],
+  "VersionFiles": [
+    {
+      "SoftwarePackageVersionFileTypeId": "8a19e4d3-1328-4372-b99d-08b843255fa1",
+      "FileName": "Test Plan File",
+      "Description": "Test Plan Description",
+      "RelativePath": "prod_path\release_xx",
+      "State": "Uploaded",
+      "VersionId": "dcc071d7-69c7-448b-9883-8280948ab84c",
+      "Timestamp": "1511950291651"
+    },
+    {
+      "Description": "Updated Test Plan Description",
+      "VersionId": "dcc071d7-69c7-448b-9883-8280948ab84c",
+      "Timestamp": "1511950291651"
+    },
+    {
+      "SoftwarePackageVersionFileTypeId": "7efe5ce2-64b8-4245-ab42-de56bf99be18",
+      "FileName": "Test Criteria Name",
+      "Description": "Test Criteria Description",
+      "RelativePath": "",
+      "State": "Uploaded",
+      "VersionId": "dcc071d7-69c7-448b-9883-8280948ab84c",
+      "Timestamp": "1511950291651"
+    },
+    {
+      "SoftwarePackageVersionFileTypeId": "7efe5ce2-64b8-4245-ab42-de56bf99be18",
+      "FileName": "Test File Name",
+      "Description": "Test Description",
+      "RelativePath": "prod_path\release_xx",
+      "State": "Uploaded",
+      "VersionId": "dcc071d7-69c7-448b-9883-8280948ab84c",
+      "Timestamp": "1511950291651"
+    },
+    {
+      "State": "Released",
+      "VersionId": "dcc071d7-69c7-448b-9883-8280948ab84c",
+      "Timestamp": "1511950291651",
+      "AcaResourceId": "157b8e4c-c83f-4c58-ae0d-97ea6cc4f94d"
+    },
+    {
+      "State": "Released",
+      "VersionId": "dcc071d7-69c7-448b-9883-8280948ab84c",
+      "Timestamp": "1511950291651",
+      "AcaResourceId": "f2b07981-dc35-4b93-bcde-150276557b71"
+    }
+  ],
+  "DependentVersions": [
+    {
+      "Id": {
+        "$oid": "64a6cbe34f40911951dc2b1c"
+      },
+      "DependentVersionId": "2d59a9e5-78ca-4057-a9b9-f74a5196ca06",
+      "Timestamp": "1511950291651"
+    },
+    {
+      "Id": {
+        "$oid": "64a6cbe34f40911951dc2b1e"
+      },
+      "DependentVersionId": "6bf50fff-34e4-4d8d-95d2-42f344c38e1e",
+      "Timestamp": "1511950291651"
+    },
+    {
+      "Id": {
+        "$oid": "64a6cbe34f40911951dc2b26"
+      },
+      "DependentVersionId": "6bf50fff-34e4-4d8d-95d2-42f344c38e1e",
+      "Timestamp": "1511950291651"
+    }
+  ],
+  "Tags": [],
+  "EventName": "Snapshot",
+  "Timestamp": {
+    "$date": "2023-07-06T14:29:40.291Z"
+  }
+}]

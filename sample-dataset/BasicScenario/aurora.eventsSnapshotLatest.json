@@ -1,0 +1,84 @@
+[{
+  "_id": {
+    "$oid": "64a7c44c0be33d98cd4c138e"
+  },
+  "LastUpdatedAt": "1511950291651",
+  "VersionId": "dcc071d7-69c7-448b-9883-8280948ab84c",
+  "SoftwarePackage": [],
+  "Version": [
+    {
+      "_id": {
+        "$oid": "64a6f2544f40911951dc2bb4"
+      },
+      "RState": "R1A",
+      "SoftwarePackageId": "1bac2a24-6b9e-491f-ab2a-f1572766bf4f",
+      "State": "Released",
+      "VersionId": "dcc071d7-69c7-448b-9883-8280948ab84c",
+      "Timestamp": "1511950291651",
+      "VersionFiles": [
+        {
+          "Id": "11e36f5b-a0e2-4868-99bf-8a914a754d8b",
+          "SoftwarePackageVersionFileTypeId": "8a19e4d3-1328-4372-b99d-08b843255fa1",
+          "FileName": "Test Plan File",
+          "Description": "Updated Test Plan Description",
+          "RelativePath": "prod_path\release_xx",
+          "State": "Released",
+          "VersionId": "dcc071d7-69c7-448b-9883-8280948ab84c",
+          "Timestamp": "1511950291651",
+          "AcaResourceId": "157b8e4c-c83f-4c58-ae0d-97ea6cc4f94d"
+        },
+        {
+          "Id": "96d68b9e-5d93-4f65-b0e2-b41636fbea9a",
+          "SoftwarePackageVersionFileTypeId": "7efe5ce2-64b8-4245-ab42-de56bf99be18",
+          "FileName": "Test File Name",
+          "Description": "Test Description",
+          "RelativePath": "prod_path\release_xx",
+          "State": "Uploaded",
+          "VersionId": "dcc071d7-69c7-448b-9883-8280948ab84c",
+          "Timestamp": "1511950291651"
+        },
+        {
+          "Id": "ef1fef08-2b97-48c9-9087-6c16bd10ef79",
+          "SoftwarePackageVersionFileTypeId": "7efe5ce2-64b8-4245-ab42-de56bf99be18",
+          "FileName": "Test Criteria Name",
+          "Description": "Test Criteria Description",
+          "RelativePath": "",
+          "State": "Released",
+          "VersionId": "dcc071d7-69c7-448b-9883-8280948ab84c",
+          "Timestamp": "1511950291651",
+          "AcaResourceId": "f2b07981-dc35-4b93-bcde-150276557b71"
+        }
+      ]
+    }
+  ],
+  "DependentVersions": [
+    {
+      "_id": {
+        "$oid": "64a6f2544f40911951dc2ba2"
+      },
+      "Id": "710ce40f-4b8d-4345-9daf-455ee4b1f1eb",
+      "DependentVersionId": "2d59a9e5-78ca-4057-a9b9-f74a5196ca06",
+      "Timestamp": "1511950291651"
+    },
+    {
+      "_id": {
+        "$oid": "64a6f2544f40911951dc2ba4"
+      },
+      "Id": "fde1581f-dad2-448b-94b2-07de1ed9eaad",
+      "DependentVersionId": "6bf50fff-34e4-4d8d-95d2-42f344c38e1e",
+      "Timestamp": "1511950291651"
+    },
+    {
+      "_id": {
+        "$oid": "64a6f2544f40911951dc2bac"
+      },
+      "DependentVersionId": "6bf50fff-34e4-4d8d-95d2-42f344c38e1e",
+      "Timestamp": "1511950291651"
+    }
+  ],
+  "Tags": [],
+  "EventName": "Snapshot",
+  "Timestamp": {
+    "$date": "2023-07-07T07:52:44.065Z"
+  }
+}]

@@ -1,0 +1,58 @@
+[
+  {
+    "Classifiers": ["ClassifierCreated"]
+  },
+  {
+    "SoftwarePackages": ["SoftwarePackageCreated", "SoftwarePackageUpdated"]
+  },
+  {
+    "Tags": ["TagCreated"]
+  },
+  {
+    "Versions": [
+      "VersionCreated",
+      "VersionUpdated",
+      "ProductRStateCreated",
+      "AcaGroupCreated",
+      "VersionStateChanged",
+      "RegisteredInPrim"
+    ],
+    "VersionFiles": [
+      "FileAttached",
+      "FileMetadataUpdated",
+      "FileMovedToAca",
+      "FileRemoved"
+    ],
+    "DependentVersions": ["DependentVersionAdded", "DependentVersionRemoved"],
+    "Tags": ["TagAddedToVersion", "TagRemovedFromVersion"]
+  },
+  {
+    "SoftwarePackageVersions": [
+      "SoftwarePackageCreated",
+      "VersionCreated",
+      "VersionUpdated",
+      "ProductRStateCreated",
+      "VersionStateChanged"
+    ]
+  },
+  {
+    "VersionFiles": [
+      "FileAttached",
+      "FileMetadataUpdated",
+      "FileRemoved",
+      "FileMovedToAca",
+      "VersionUpdated"
+    ]
+  },
+  {
+    "VersionDependentVersions": [
+      "DependentVersionAdded",
+      "DependentVersionRemoved",
+      "VersionUpdated",
+      "SoftwarePackageUpdated"
+    ]
+  },
+  {
+    "VersionTags": ["TagAddedToVersion", "TagRemovedFromVersion"]
+  }
+]

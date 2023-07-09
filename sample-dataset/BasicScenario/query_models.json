@@ -1,0 +1,111 @@
+{
+  "Classifiers": [
+    {
+      "Id": "",
+      "TableName": "",
+      "Code": "",
+      "Definition": ""
+    }
+  ],
+  "SoftwarePackages": [
+    {
+      "Id": "",
+      "SoftwarePackageTypeId": "",
+      "ProductNumber": "",
+      "Name": "",
+      "Description": "",
+      "AccessRightGroupId": ""
+    }
+  ],
+  "Versions": [
+    {
+      "Id": "",
+      "RState": "",
+      "Description": "",
+      "SoftwarePackageId": "",
+      "State": "",
+      "AcaGroupId": "",
+      "AcaRegistrationId": "",
+      "VersionFiles": [
+        {
+          "Id": "",
+          "SoftwarePackageVersionFileTypeId": "",
+          "FileName": "",
+          "Description": "",
+          "RelativePath": "",
+          "VersionId": "",
+          "AcaResourceId": "",
+          "State": ""
+        }
+      ],
+      "DependentVersions": [
+        {
+          "Id": "",
+          "DependentVersionId": "",
+          "VersionId": ""
+        }
+      ],
+      "Tags": [
+        {
+          "Id": "",
+          "TagId": "",
+          "VersionId": ""
+        }
+      ]
+    }
+  ],
+  "Tags": [
+    {
+      "Id": "",
+      "Name": ""
+    }
+  ],
+  "SoftwarePackageVersions": [
+    {
+      "SoftwarePackageId": "",
+      "Name": "",
+      "VersionId": "",
+      "ProductNumber": "",
+      "SoftwarePackageTypeId": "",
+      "SoftwarePackageType": "",
+      "RState": "",
+      "State": "",
+      "Tags": [
+        {
+          "TagId": ""
+        }
+      ]
+    }
+  ],
+  "VersionFiles": [
+    {
+      "Id": "",
+      "SoftwarePackageVersionFileTypeId": "",
+      "SoftwarePackageVersionFileType": "",
+      "FileName": "",
+      "Description": "",
+      "RelativePath": "",
+      "VersionId": "",
+      "AcaResourceId": "",
+      "State": ""
+    }
+  ],
+  "VersionDependentVersions": [
+    {
+      "VersionId": "",
+      "ProductNumber": "",
+      "RState": "",
+      "SoftwarePackageType": "",
+      "Description": "",
+      "State": "",
+      "DependentVersionId": ""
+    }
+  ],
+  "VersionTags": [
+    {
+      "VersionId": "",
+      "TagId": "",
+      "Name": ""
+    }
+  ]
+}

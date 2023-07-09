@@ -1,0 +1,206 @@
+{
+  "Classifiers": [
+    {
+      "Id": "d2333d35-e4ad-4bb5-a457-c0f8315561c1",
+      "TableName": "SoftwarePackageType",
+      "Code": "SP1",
+      "Definition": "Package Type 1"
+    },
+    {
+      "Id": "33b80d08-e74a-4053-a295-87f1b7365ca0",
+      "TableName": "SoftwarePackageType",
+      "Code": "SP2",
+      "Definition": "Package Type 2"
+    },
+    {
+      "Id": "db55f94b-a966-4131-83f2-05dc526600cf",
+      "TableName": "AccessRightGroup",
+      "Code": "AR1",
+      "Definition": "Access Right Group 1"
+    },
+    {
+      "Id": "8a19e4d3-1328-4372-b99d-08b843255fa1",
+      "TableName": "SoftwarePackageVersionFileType",
+      "Code": "SPVF1",
+      "Definition": "Software Package Version File Type 1"
+    },
+    {
+      "Id": "7efe5ce2-64b8-4245-ab42-de56bf99be18",
+      "TableName": "SoftwarePackageVersionFileType",
+      "Code": "SPVF2",
+      "Definition": "Software Package Version File Type 2"
+    }
+  ],
+  "SoftwarePackages": [
+    {
+      "Id": "1bac2a24-6b9e-491f-ab2a-f1572766bf4f",
+      "SoftwarePackageTypeId": "d2333d35-e4ad-4bb5-a457-c0f8315561c1",
+      "ProductNumber": "Product Number",
+      "Name": "Test Software Package",
+      "Description": "Updated Description",
+      "AccessRightGroupId": "db55f94b-a966-4131-83f2-05dc526600cf"
+    }
+  ],
+  "Versions": [
+    {
+      "Id": "dcc071d7-69c7-448b-9883-8280948ab84c",
+      "RState": "R1A",
+      "Description": "Updated Test Description",
+      "SoftwarePackageId": "1bac2a24-6b9e-491f-ab2a-f1572766bf4f",
+      "State": "Released",
+      "AcaGroupId": "145d505b-f60e-4e8f-bbb8-d4224fc33b80",
+      "AcaRegistrationId": "44cd1b85-d671-42cc-86e5-9757f1833df7",
+      "VersionFiles": [
+        {
+          "Id": "11e36f5b-a0e2-4868-99bf-8a914a754d8b",
+          "SoftwarePackageVersionFileTypeId": "8a19e4d3-1328-4372-b99d-08b843255fa1",
+          "FileName": "Test Plan File",
+          "Description": "Updated Test Plan Description",
+          "RelativePath": "prod_path\release_xx",
+          "VersionId": "dcc071d7-69c7-448b-9883-8280948ab84c",
+          "AcaResourceId": "157b8e4c-c83f-4c58-ae0d-97ea6cc4f94d",
+          "State": "Released"
+        },
+        {
+          "Id": "ef1fef08-2b97-48c9-9087-6c16bd10ef79",
+          "SoftwarePackageVersionFileTypeId": "7efe5ce2-64b8-4245-ab42-de56bf99be18",
+          "FileName": "Test Criteria Name",
+          "Description": "Test Criteria Description",
+          "RelativePath": "",
+          "VersionId": "dcc071d7-69c7-448b-9883-8280948ab84c",
+          "AcaResourceId": "f2b07981-dc35-4b93-bcde-150276557b71",
+          "State": "Released"
+        }
+      ],
+      "DependentVersions": [
+        {
+          "Id": "710ce40f-4b8d-4345-9daf-455ee4b1f1eb",
+          "DependentVersionId": "2d59a9e5-78ca-4057-a9b9-f74a5196ca06",
+          "VersionId": "dcc071d7-69c7-448b-9883-8280948ab84c"
+        }
+      ],
+      "Tags": [
+        {
+          "Id": "b2855749-1f55-42af-bec8-53a87f6e3536",
+          "TagId": "1cf43dc8-44f2-44b8-8c67-7dbdcfb78ee1",
+          "VersionId": "dcc071d7-69c7-448b-9883-8280948ab84c"
+        }
+      ]
+    },
+    {
+      "Id": "6bf50fff-34e4-4d8d-95d2-42f344c38e1e",
+      "RState": "R2A",
+      "Description": "Test Version R2A",
+      "SoftwarePackageId": "1bac2a24-6b9e-491f-ab2a-f1572766bf4f",
+      "State": "Initial",
+      "AcaGroupId": "",
+      "AcaRegistrationId": "",
+      "VersionFiles": [],
+      "DependentVersions": [],
+      "Tags": []
+    },
+    {
+      "Id": "2d59a9e5-78ca-4057-a9b9-f74a5196ca06",
+      "RState": "R3A",
+      "Description": "Test",
+      "SoftwarePackageId": "1bac2a24-6b9e-491f-ab2a-f1572766bf4f",
+      "State": "Initial",
+      "AcaGroupId": "",
+      "AcaRegistrationId": "",
+      "VersionFiles": [],
+      "DependentVersions": [],
+      "Tags": []
+    }
+  ],
+  "Tags": [
+    {
+      "Id": "1cf43dc8-44f2-44b8-8c67-7dbdcfb78ee1",
+      "Name": "Test Tag"
+    },
+    {
+      "Id": "a8fcaee4-4248-42df-9808-c86eaabf21a6",
+      "Name": "Test Tag 2"
+    }
+  ],
+  "SoftwarePackageVersions": [
+    {
+      "SoftwarePackageId": "1bac2a24-6b9e-491f-ab2a-f1572766bf4f",
+      "Name": "Test Software Package",
+      "VersionId": "dcc071d7-69c7-448b-9883-8280948ab84c",
+      "ProductNumber": "Product Number",
+      "SoftwarePackageTypeId": "d2333d35-e4ad-4bb5-a457-c0f8315561c1",
+      "SoftwarePackageType": "Package Type 1",
+      "RState": "R1A",
+      "State": "Released",
+      "Tags": [
+        {
+          "TagId": "1cf43dc8-44f2-44b8-8c67-7dbdcfb78ee1"
+        }
+      ]
+    },
+    {
+      "SoftwarePackageId": "1bac2a24-6b9e-491f-ab2a-f1572766bf4f",
+      "Name": "Test Software Package",
+      "VersionId": "6bf50fff-34e4-4d8d-95d2-42f344c38e1e",
+      "ProductNumber": "Product Number",
+      "SoftwarePackageTypeId": "d2333d35-e4ad-4bb5-a457-c0f8315561c1",
+      "SoftwarePackageType": "Package Type 1",
+      "RState": "R2A",
+      "State": "Initial",
+      "Tags": []
+    },
+    {
+      "SoftwarePackageId": "1bac2a24-6b9e-491f-ab2a-f1572766bf4f",
+      "Name": "Test Software Package",
+      "VersionId": "2d59a9e5-78ca-4057-a9b9-f74a5196ca06",
+      "ProductNumber": "Product Number",
+      "SoftwarePackageTypeId": "d2333d35-e4ad-4bb5-a457-c0f8315561c1",
+      "SoftwarePackageType": "Package Type 1",
+      "RState": "R3A",
+      "State": "Initial",
+      "Tags": []
+    }
+  ],
+  "VersionFiles": [
+    {
+      "Id": "11e36f5b-a0e2-4868-99bf-8a914a754d8b",
+      "SoftwarePackageVersionFileTypeId": "8a19e4d3-1328-4372-b99d-08b843255fa1",
+      "SoftwarePackageVersionFileType": "Software Package Version File Type 1",
+      "FileName": "Test Plan File",
+      "Description": "Updated Test Plan Description",
+      "RelativePath": "prod_path\release_xx",
+      "VersionId": "dcc071d7-69c7-448b-9883-8280948ab84c",
+      "AcaResourceId": "157b8e4c-c83f-4c58-ae0d-97ea6cc4f94d",
+      "State": "Released"
+    },
+    {
+      "Id": "ef1fef08-2b97-48c9-9087-6c16bd10ef79",
+      "SoftwarePackageVersionFileTypeId": "7efe5ce2-64b8-4245-ab42-de56bf99be18",
+      "SoftwarePackageVersionFileType": "Software Package Version File Type 2",
+      "FileName": "Test Criteria Name",
+      "Description": "Test Criteria Description",
+      "RelativePath": "",
+      "VersionId": "dcc071d7-69c7-448b-9883-8280948ab84c",
+      "AcaResourceId": "f2b07981-dc35-4b93-bcde-150276557b71",
+      "State": "Released"
+    }
+  ],
+  "VersionDependentVersions": [
+    {
+      "VersionId": "dcc071d7-69c7-448b-9883-8280948ab84c",
+      "ProductNumber": "Test Software Package",
+      "RState": "R3A",
+      "SoftwarePackageType": "Package Type 1",
+      "Description": "Test",
+      "State": "Initial",
+      "DependentVersionId": "2d59a9e5-78ca-4057-a9b9-f74a5196ca06"
+    }
+  ],
+  "VersionTags": [
+    {
+      "VersionId": "dcc071d7-69c7-448b-9883-8280948ab84c",
+      "TagId": "1cf43dc8-44f2-44b8-8c67-7dbdcfb78ee1",
+      "Name": "Test Tag"
+    }
+  ]
+}

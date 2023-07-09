@@ -1,0 +1,444 @@
+[
+  {
+    "AggregateId": "d2333d35-e4ad-4bb5-a457-c0f8315561c1",
+    "Sequence": "1",
+    "Event": "ClassifierCreated",
+    "Timestamp": "1511950291651",
+    "Payload": {
+      "TableName": "SoftwarePackageType",
+      "Code": "SP1",
+      "Definition": "Package Type 1"
+    }
+  },
+  {
+    "AggregateId": "33b80d08-e74a-4053-a295-87f1b7365ca0",
+    "Sequence": "1",
+    "Event": "ClassifierCreated",
+    "Timestamp": "1511950291651",
+    "Payload": {
+      "TableName": "SoftwarePackageType",
+      "Code": "SP2",
+      "Definition": "Package Type 2"
+    }
+  },
+  {
+    "AggregateId": "db55f94b-a966-4131-83f2-05dc526600cf",
+    "Sequence": "1",
+    "Event": "ClassifierCreated",
+    "Timestamp": "1511950291651",
+    "Payload": {
+      "TableName": "AccessRightGroup",
+      "Code": "AR1",
+      "Definition": "Access Right Group 1"
+    }
+  },
+  {
+    "AggregateId": "8a19e4d3-1328-4372-b99d-08b843255fa1",
+    "Sequence": "1",
+    "Event": "ClassifierCreated",
+    "Timestamp": "1511950291651",
+    "Payload": {
+      "TableName": "SoftwarePackageVersionFileType",
+      "Code": "SPVF1",
+      "Definition": "Software Package Version File Type 1"
+    }
+  },
+  {
+    "AggregateId": "7efe5ce2-64b8-4245-ab42-de56bf99be18",
+    "Sequence": "1",
+    "Event": "ClassifierCreated",
+    "Timestamp": "1511950291651",
+    "Payload": {
+      "TableName": "SoftwarePackageVersionFileType",
+      "Code": "SPVF2",
+      "Definition": "Software Package Version File Type 2"
+    }
+  },
+  {
+    "AggregateId": "1bac2a24-6b9e-491f-ab2a-f1572766bf4f",
+    "Sequence": "1",
+    "Event": "SoftwarePackageCreated",
+    "Timestamp": "1511950291651",
+    "Payload": {
+      "SoftwarePackageTypeId": "d2333d35-e4ad-4bb5-a457-c0f8315561c1",
+      "ProductNumber": "ProductNumber",
+      "Name": "Test Software Package",
+      "Description": "Description",
+      "AccessRightGroupId": "db55f94b-a966-4131-83f2-05dc526600cf"
+    }
+  },
+  {
+    "AggregateId": "dcc071d7-69c7-448b-9883-8280948ab84c",
+    "Sequence": "1",
+    "Event": "VersionCreated",
+    "Timestamp": "1511950291651",
+    "Payload": {
+      "RState": "R1A",
+      "Description": "Test",
+      "SoftwarePackageId": "1bac2a24-6b9e-491f-ab2a-f1572766bf4f",
+      "State": "Initial"
+    }
+  },
+  {
+    "AggregateId": "1bac2a24-6b9e-491f-ab2a-f1572766bf4f",
+    "Sequence": "2",
+    "Event": "SoftwarePackageUpdated",
+    "Timestamp": "1511950291651",
+    "Payload": {
+      "SoftwarePackageTypeId": "d2333d35-e4ad-4bb5-a457-c0f8315561c1",
+      "ProductNumber": "Product Number",
+      "Name": "Test Software Package",
+      "Description": "Updated Description",
+      "AccessRightGroupId": "db55f94b-a966-4131-83f2-05dc526600cf"
+    }
+  },
+  {
+    "AggregateId": "dcc071d7-69c7-448b-9883-8280948ab84c",
+    "Sequence": "2",
+    "Event": "FileAttached",
+    "Timestamp": "1511950291651",
+    "Payload": {
+      "Id": "11e36f5b-a0e2-4868-99bf-8a914a754d8b",
+      "SoftwarePackageVersionFileTypeId": "8a19e4d3-1328-4372-b99d-08b843255fa1",
+      "FileName": "Test Plan File",
+      "Description": "Test Plan Description",
+      "RelativePath": "prod_path\release_xx",
+      "State": "Uploaded"
+    }
+  },
+  {
+    "AggregateId": "dcc071d7-69c7-448b-9883-8280948ab84c",
+    "Sequence": "3",
+    "Event": "FileMetadataUpdated",
+    "Timestamp": "1511950291651",
+    "Payload": {
+      "Id": "11e36f5b-a0e2-4868-99bf-8a914a754d8b",
+      "Description": "Updated Test Plan Description"
+    }
+  },
+  {
+    "AggregateId": "dcc071d7-69c7-448b-9883-8280948ab84c",
+    "Sequence": "4",
+    "Event": "VersionUpdated",
+    "Timestamp": "1511950291651",
+    "Payload": {
+      "RState": "R1A",
+      "Description": "Updated Test Description"
+    }
+  },
+  {
+    "AggregateId": "6bf50fff-34e4-4d8d-95d2-42f344c38e1e",
+    "Sequence": "1",
+    "Event": "VersionCreated",
+    "Timestamp": "1511950291651",
+    "Payload": {
+      "RState": "R2A",
+      "Description": "Test Version R2A",
+      "SoftwarePackageId": "1bac2a24-6b9e-491f-ab2a-f1572766bf4f",
+      "State": "Initial"
+    }
+  },
+  {
+    "AggregateId": "2d59a9e5-78ca-4057-a9b9-f74a5196ca06",
+    "Sequence": "1",
+    "Event": "VersionCreated",
+    "Timestamp": "1511950291651",
+    "Payload": {
+      "RState": "R3A",
+      "Description": "Test",
+      "SoftwarePackageId": "1bac2a24-6b9e-491f-ab2a-f1572766bf4f",
+      "State": "Initial"
+    }
+  },
+  {
+    "AggregateId": "dcc071d7-69c7-448b-9883-8280948ab84c",
+    "Sequence": "5",
+    "Event": "DependentVersionAdded",
+    "Timestamp": "1511950291651",
+    "Payload": {
+      "Id": "710ce40f-4b8d-4345-9daf-455ee4b1f1eb",
+      "DependentVersionId": "2d59a9e5-78ca-4057-a9b9-f74a5196ca06"
+    }
+  },
+  {
+    "AggregateId": "dcc071d7-69c7-448b-9883-8280948ab84c",
+    "Sequence": "6",
+    "Event": "FileAttached",
+    "Timestamp": "1511950291651",
+    "Payload": {
+      "Id": "ef1fef08-2b97-48c9-9087-6c16bd10ef79",
+      "SoftwarePackageVersionFileTypeId": "7efe5ce2-64b8-4245-ab42-de56bf99be18",
+      "FileName": "Test Criteria Name",
+      "Description": "Test Criteria Description",
+      "RelativePath": "",
+      "State": "Uploaded"
+    }
+  },
+  {
+    "AggregateId": "dcc071d7-69c7-448b-9883-8280948ab84c",
+    "Sequence": "7",
+    "Event": "DependentVersionAdded",
+    "Timestamp": "1511950291651",
+    "Payload": {
+      "Id": "fde1581f-dad2-448b-94b2-07de1ed9eaad",
+      "DependentVersionId": "6bf50fff-34e4-4d8d-95d2-42f344c38e1e"
+    }
+  },
+  {
+    "AggregateId": "dcc071d7-69c7-448b-9883-8280948ab84c",
+    "Sequence": "8",
+    "Event": "FileAttached",
+    "Timestamp": "1511950291651",
+    "Payload": {
+      "Id": "96d68b9e-5d93-4f65-b0e2-b41636fbea9a",
+      "SoftwarePackageVersionFileTypeId": "7efe5ce2-64b8-4245-ab42-de56bf99be18",
+      "FileName": "Test File Name",
+      "Description": "Test Description",
+      "RelativePath": "prod_path\release_xx",
+      "State": "Uploaded"
+    }
+  },
+  {
+    "AggregateId": "dcc071d7-69c7-448b-9883-8280948ab84c",
+    "Sequence": "9",
+    "Event": "FileRemoved",
+    "Timestamp": "1511950291651",
+    "Payload": {
+      "VersionFileId": "96d68b9e-5d93-4f65-b0e2-b41636fbea9a"
+    }
+  },
+  {
+    "AggregateId": "1cf43dc8-44f2-44b8-8c67-7dbdcfb78ee1",
+    "Sequence": "1",
+    "Event": "TagCreated",
+    "Timestamp": "1511950291651",
+    "Payload": {
+      "Name": "Test Tag"
+    }
+  },
+  {
+    "AggregateId": "dcc071d7-69c7-448b-9883-8280948ab84c",
+    "Sequence": "10",
+    "Event": "TagAddedToVersion",
+    "Timestamp": "1511950291651",
+    "Payload": {
+      "Id": "b2855749-1f55-42af-bec8-53a87f6e3536",
+      "TagId": "1cf43dc8-44f2-44b8-8c67-7dbdcfb78ee1"
+    }
+  },
+  {
+    "AggregateId": "dcc071d7-69c7-448b-9883-8280948ab84c",
+    "Sequence": "11",
+    "Event": "Snapshot",
+    "Timestamp": "1511950291651",
+    "Payload": {
+      "Id": "dcc071d7-69c7-448b-9883-8280948ab84c",
+      "RState": "R1A",
+      "Description": "Updated Test Description",
+      "SoftwarePackageId": "1bac2a24-6b9e-491f-ab2a-f1572766bf4f",
+      "State": "Initial",
+      "VersionFiles": [
+        {
+          "Id": "11e36f5b-a0e2-4868-99bf-8a914a754d8b",
+          "SoftwarePackageVersionFileTypeId": "8a19e4d3-1328-4372-b99d-08b843255fa1",
+          "FileName": "Test Plan File",
+          "Description": "Updated Test Plan Description",
+          "RelativePath": "prod_path\release_xx",
+          "VersionId": "dcc071d7-69c7-448b-9883-8280948ab84c",
+          "State": "Uploaded"
+        },
+        {
+          "Id": "ef1fef08-2b97-48c9-9087-6c16bd10ef79",
+          "SoftwarePackageVersionFileTypeId": "7efe5ce2-64b8-4245-ab42-de56bf99be18",
+          "FileName": "Test Criteria Name",
+          "Description": "Test Criteria Description",
+          "RelativePath": "",
+          "VersionId": "dcc071d7-69c7-448b-9883-8280948ab84c",
+          "State": "Uploaded"
+        }
+      ],
+      "DependentVersions": [
+        {
+          "Id": "710ce40f-4b8d-4345-9daf-455ee4b1f1eb",
+          "DependentVersionId": "2d59a9e5-78ca-4057-a9b9-f74a5196ca06",
+          "VersionId": "dcc071d7-69c7-448b-9883-8280948ab84c"
+        },
+        {
+          "Id": "fde1581f-dad2-448b-94b2-07de1ed9eaad",
+          "DependentVersionId": "6bf50fff-34e4-4d8d-95d2-42f344c38e1e",
+          "VersionId": "dcc071d7-69c7-448b-9883-8280948ab84c"
+        }
+      ],
+      "Tags": [
+        {
+          "Id": "b2855749-1f55-42af-bec8-53a87f6e3536",
+          "TagId": "1cf43dc8-44f2-44b8-8c67-7dbdcfb78ee1",
+          "VersionId": "dcc071d7-69c7-448b-9883-8280948ab84c"
+        }
+      ]
+    }
+  },
+  {
+    "AggregateId": "a8fcaee4-4248-42df-9808-c86eaabf21a6",
+    "Sequence": "1",
+    "Event": "TagCreated",
+    "Timestamp": "1511950291651",
+    "Payload": {
+      "Name": "Test Tag 2"
+    }
+  },
+  {
+    "AggregateId": "dcc071d7-69c7-448b-9883-8280948ab84c",
+    "Sequence": "12",
+    "Event": "TagAddedToVersion",
+    "Timestamp": "1511950291651",
+    "Payload": {
+      "Id": "fa734800-d980-40a4-8795-944ea8a88f6c",
+      "TagId": "a8fcaee4-4248-42df-9808-c86eaabf21a6"
+    }
+  },
+  {
+    "AggregateId": "dcc071d7-69c7-448b-9883-8280948ab84c",
+    "Sequence": "13",
+    "Event": "TagRemovedFromVersion",
+    "Timestamp": "1511950291651",
+    "Payload": {
+      "TagId": "a8fcaee4-4248-42df-9808-c86eaabf21a6"
+    }
+  },
+  {
+    "AggregateId": "dcc071d7-69c7-448b-9883-8280948ab84c",
+    "Sequence": "14",
+    "Event": "DependentVersionRemoved",
+    "Timestamp": "1511950291651",
+    "Payload": {
+      "DependentVersionId": "2d59a9e5-78ca-4057-a9b9-f74a5196ca06"
+    }
+  },
+  {
+    "AggregateId": "dcc071d7-69c7-448b-9883-8280948ab84c",
+    "Sequence": "15",
+    "Event": "ProductRStateCreated",
+    "Timestamp": "1511950291651",
+    "Payload": {
+      "RState": "R1A"
+    }
+  },
+  {
+    "AggregateId": "dcc071d7-69c7-448b-9883-8280948ab84c",
+    "Sequence": "16",
+    "Event": "AcaGroupCreated",
+    "Timestamp": "1511950291651",
+    "Payload": {
+      "AcaGroupId": "145d505b-f60e-4e8f-bbb8-d4224fc33b80"
+    }
+  },
+  {
+    "AggregateId": "dcc071d7-69c7-448b-9883-8280948ab84c",
+    "Sequence": "17",
+    "Event": "VersionStateChanged",
+    "Timestamp": "1511950291651",
+    "Payload": {
+      "State": "Uploading"
+    }
+  },
+  {
+    "AggregateId": "dcc071d7-69c7-448b-9883-8280948ab84c",
+    "Sequence": "18",
+    "Event": "FileMovedToAca",
+    "Timestamp": "1511950291651",
+    "Payload": {
+      "FileId": "11e36f5b-a0e2-4868-99bf-8a914a754d8b",
+      "AcaResourceId": "157b8e4c-c83f-4c58-ae0d-97ea6cc4f94d",
+      "State": "Released"
+    }
+  },
+  {
+    "AggregateId": "dcc071d7-69c7-448b-9883-8280948ab84c",
+    "Sequence": "19",
+    "Event": "FileMovedToAca",
+    "Timestamp": "1511950291651",
+    "Payload": {
+      "FileId": "ef1fef08-2b97-48c9-9087-6c16bd10ef79",
+      "AcaResourceId": "f2b07981-dc35-4b93-bcde-150276557b71",
+      "State": "Released"
+    }
+  },
+  {
+    "AggregateId": "dcc071d7-69c7-448b-9883-8280948ab84c",
+    "Sequence": "20",
+    "Event": "VersionStateChanged",
+    "Timestamp": "1511950291651",
+    "Payload": {
+      "State": "Registration"
+    }
+  },
+  {
+    "AggregateId": "dcc071d7-69c7-448b-9883-8280948ab84c",
+    "Sequence": "21",
+    "Event": "Snapshot",
+    "Timestamp": "1511950291651",
+    "Payload": {
+      "Id": "dcc071d7-69c7-448b-9883-8280948ab84c",
+      "RState": "R1A",
+      "Description": "Updated Test Description",
+      "SoftwarePackageId": "1bac2a24-6b9e-491f-ab2a-f1572766bf4f",
+      "State": "Registration",
+      "AcaGroupId": "145d505b-f60e-4e8f-bbb8-d4224fc33b80",
+      "VersionFiles": [
+        {
+          "Id": "11e36f5b-a0e2-4868-99bf-8a914a754d8b",
+          "SoftwarePackageVersionFileTypeId": "8a19e4d3-1328-4372-b99d-08b843255fa1",
+          "FileName": "Test Plan File",
+          "Description": "Updated Test Plan Description",
+          "RelativePath": "prod_path\release_xx",
+          "VersionId": "dcc071d7-69c7-448b-9883-8280948ab84c",
+          "AcaResourceId": "157b8e4c-c83f-4c58-ae0d-97ea6cc4f94d",
+          "State": "Released"
+        },
+        {
+          "Id": "ef1fef08-2b97-48c9-9087-6c16bd10ef79",
+          "SoftwarePackageVersionFileTypeId": "7efe5ce2-64b8-4245-ab42-de56bf99be18",
+          "FileName": "Test Criteria Name",
+          "Description": "Test Criteria Description",
+          "RelativePath": "",
+          "VersionId": "dcc071d7-69c7-448b-9883-8280948ab84c",
+          "AcaResourceId": "f2b07981-dc35-4b93-bcde-150276557b71",
+          "State": "Released"
+        }
+      ],
+      "DependentVersions": [
+        {
+          "Id": "fde1581f-dad2-448b-94b2-07de1ed9eaad",
+          "DependentVersionId": "6bf50fff-34e4-4d8d-95d2-42f344c38e1e",
+          "VersionId": "dcc071d7-69c7-448b-9883-8280948ab84c"
+        }
+      ],
+      "Tags": [
+        {
+          "Id": "b2855749-1f55-42af-bec8-53a87f6e3536",
+          "TagId": "1cf43dc8-44f2-44b8-8c67-7dbdcfb78ee1",
+          "VersionId": "dcc071d7-69c7-448b-9883-8280948ab84c"
+        }
+      ]
+    }
+  },
+  {
+    "AggregateId": "dcc071d7-69c7-448b-9883-8280948ab84c",
+    "Sequence": "22",
+    "Event": "RegisteredInPrim",
+    "Timestamp": "1511950291651",
+    "Payload": {
+      "RegistrationId": "44cd1b85-d671-42cc-86e5-9757f1833df7"
+    }
+  },
+  {
+    "AggregateId": "dcc071d7-69c7-448b-9883-8280948ab84c",
+    "Sequence": "23",
+    "Event": "VersionStateChanged",
+    "Timestamp": "1511950291651",
+    "Payload": {
+      "State": "Released"
+    }
+  }
+]
