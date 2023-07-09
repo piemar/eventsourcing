@@ -36,7 +36,7 @@ class MongoUser(HttpUser):
         }
 
         # Insert the document into your MongoDB Atlas cluster
-        db = self.client['aurora_peter']  # Replace with your database name
+        db = self.client['aurora']  # Replace with your database name
         collection = db['events']  # Replace with your collection name
         collection.insert_one(document)
         self.user_count = self.user_count+1

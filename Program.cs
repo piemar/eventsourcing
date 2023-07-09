@@ -299,7 +299,7 @@ namespace ChangeStreamExample
                 }),
                 new BsonDocument("$lookup", new BsonDocument
                 {
-                    { "from", "events" },
+                    { "from", mongoClient.CollectionName },
                     { "let", new BsonDocument("softwarePackageIds", new BsonDocument("$filter", new BsonDocument
                         {
                             { "input", new BsonDocument("$map", new BsonDocument
@@ -395,7 +395,7 @@ namespace ChangeStreamExample
 
                 new BsonDocument("$merge", new BsonDocument
                 {
-                    { "into", new BsonDocument("db", "aurora_peter").Add("coll", "events") },
+                    { "into", new BsonDocument("db", mongoClient.DatabaseName).Add("coll", mongoClient.CollectionName) },
                     { "on", "_id" },
                     { "whenMatched", "replace" },
                     { "whenNotMatched", "insert" }

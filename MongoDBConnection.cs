@@ -12,6 +12,7 @@ namespace ChangeStreamExample
     {
         private int snapshotThreshold = 100;
         private string collectionName="events";
+        private string databaseName="aurora";
         private MongoClient client;
         private IMongoDatabase database;
         public MongoDBConnection()
@@ -19,13 +20,16 @@ namespace ChangeStreamExample
             string connectionString = Environment.GetEnvironmentVariable("MONGODB_URL");
             string databaseName = Environment.GetEnvironmentVariable("DATABASE_NAME");
             string collectionName = Environment.GetEnvironmentVariable("COLLECTION_NAME");
-            string snapshotThreshold = Environment.GetEnvironmentVariable("SNAPSHOT_THRESHOLD");
+            int snapshotThreshold;
+            int.TryParse(Environment.GetEnvironmentVariable("SNAPSHOT_THRESHOLD"), out snapshotThreshold) ;
 
             if (connectionString != null && databaseName != null)
             {
                 this.client = new MongoClient(connectionString);
                 // Get the database
                 this.database = this.client.GetDatabase(databaseName);
+                this.databaseName = databaseName;
+                this.snapshotThreshold=snapshotThreshold;
             }
             else
             {
@@ -36,6 +40,7 @@ namespace ChangeStreamExample
         }
         public MongoClient MongoClient => this.client;
         public string CollectionName => this.collectionName;
+        public string DatabaseName => this.databaseName;
         public int SnapshotThreshold => this.snapshotThreshold;
         public IMongoDatabase Database => this.database;
 
