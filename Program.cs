@@ -10,9 +10,16 @@ namespace ChangeStreamExample
     {
         private static MongoDBConnection? mongoClient;
         public static void CreateSnapshot(String AggregateId)
-        {   
+        {
             var collection = mongoClient.Database.GetCollection<BsonDocument>(mongoClient.CollectionName);
-            var pipeline = new List<BsonDocument>
+            List<BsonDocument> pipeline = GetSnapShotPipeline(AggregateId);
+            var aggregation = collection.Aggregate<BsonDocument>(pipeline);
+
+        }
+
+        private static List<BsonDocument> GetSnapShotPipeline(string AggregateId)
+        {
+            return new List<BsonDocument>
             {
                 new BsonDocument("$match", new BsonDocument
                 {
@@ -71,6 +78,7 @@ namespace ChangeStreamExample
                                 { "_id", "$$ROOT._id" },
                                 { "Id", "$Payload.Id" },
                                 { "RState", "$Payload.RState" },
+                                { "Description", "$Payload.Description" },
                                 { "SoftwarePackageId", "$Payload.SoftwarePackageId" },
                                 { "State", "$Payload.State" },
                                 { "VersionId", "$$ROOT.AggregateId" },
@@ -402,9 +410,8 @@ namespace ChangeStreamExample
                 })
 
             };
-            var aggregation = collection.Aggregate<BsonDocument>(pipeline);
-            
         }
+
         public static Boolean IsSnapshot(string AggregateId)
         {
             var lastUpdatedSnapshot = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
@@ -462,7 +469,7 @@ namespace ChangeStreamExample
             // Check Snapshot creation Threshold
             if (eventsResults.Count == mongoClient.SnapshotThreshold)
             {
-                Console.WriteLine($"Creating Snapshot for AggregateId:"+AggregateId);
+                Console.1Line($"Creating Snapshot for AggregateId:"+AggregateId);
                 return true;
             }
             return false;
@@ -505,7 +512,8 @@ namespace ChangeStreamExample
             };
             // Only listen to changes that are inserts
             var pipeline = new EmptyPipelineDefinition<ChangeStreamDocument<BsonDocument>>()
-                .Match(change => change.OperationType == ChangeStreamOperationType.Insert);
+                .Match(change => change.OperationType == ChangeStreamOperationType.Insert && change.FullDocument["Event"] != "Snapshot");
+                            
 
             var cursor = collection.Watch(pipeline, options);
             return cursor;
