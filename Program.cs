@@ -469,7 +469,7 @@ namespace ChangeStreamExample
             // Check Snapshot creation Threshold
             if (eventsResults.Count == mongoClient.SnapshotThreshold)
             {
-                Console.1Line($"Creating Snapshot for AggregateId:"+AggregateId);
+                Console.WriteLine($"Creating Snapshot for AggregateId:"+AggregateId);
                 return true;
             }
             return false;
