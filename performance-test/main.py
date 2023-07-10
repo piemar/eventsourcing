@@ -10,11 +10,9 @@ class MongoUser(HttpUser):
     version_id = str(uuid.uuid4())
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.client = MongoClient('mongodb+srv://<user>:<password>@demo-cluster.tcrpd.mongodb.net/')  # Replace with your MongoDB Atlas connection URI
-
-    def on_start(self):
-        # Initialize any required setup or authentication for your MongoDB Atlas cluster
-        pass
+        self.client = MongoClient('mongodb+srv://<username>:<password>@demo-cluster.tcrpd.mongodb.net')  # Replace with your MongoDB Atlas connection URI
+        self.db = self.client["aurora"]
+        self.collection = self.db["events"]
 
     @task
     def insert_document(self):
@@ -35,13 +33,14 @@ class MongoUser(HttpUser):
             }
         }
 
-        # Insert the document into your MongoDB Atlas cluster
-        db = self.client['aurora']  # Replace with your database name
-        collection = db['events']  # Replace with your collection name
-        collection.insert_one(document)
+        self.collection.insert_one(document)
+        pass
         self.user_count = self.user_count+1
 
 def generate_event_id():
     # Implement your EventId generation logic here
     # This is just a simple example using random numbers
-    return random.randint(1, 1000)
+    return random.randint(1, 100000)
+def on_stop(self):
+    # Close the MongoDB connection after the load test is complete
+    self.client.close()

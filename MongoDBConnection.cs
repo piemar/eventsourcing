@@ -27,6 +27,7 @@ namespace ChangeStreamExample
             {
                 this.client = new MongoClient(connectionString);
                 // Get the database
+                this.collectionName = collectionName;
                 this.database = this.client.GetDatabase(databaseName);
                 this.databaseName = databaseName;
                 this.snapshotThreshold=snapshotThreshold;
